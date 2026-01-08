@@ -1,0 +1,104 @@
+
+SELECT *
+FROM covidupdated
+LEFT JOIN age_difference on 
+covidupdated.La_code = age_difference.La_code
+ LEFT JOIN deprivation on
+covidupdated.La_code = deprivation.La_code
+ LEFT JOIN  occupation on
+covidupdated.La_code = occupation.La_code
+LEFT JOIN education on
+covidupdated.La_code=education.La_code
+ORDER by covidupdated.La_name asc;
+
+SELECT 
+    La_code,
+    La_name,
+
+    -- Children: Age 0 to 14
+    (Age_0_4 + Age_5_9 + Age_10_14) AS Children,
+
+    -- Adults: Age 15 to 64
+    (Age_15_19 + Age_20_24 + Age_25_29 +
+     Age_30_34 + Age_35_39 + Age_40_44 +
+     Age_45_49 + Age_50_54 + Age_55_59 + Age_60_64) AS Adults,
+
+    -- Elders: Age 65 to 74
+    (Age_65_69 + Age_70_74) AS Elders,
+
+    -- Seniors: Age 75+
+    (Age_75_79 + Age_80_84 + Age_85_plus) AS Seniors
+
+FROM covid_19_merged;
+
+
+ALTER TABLE covid_19_merged ADD COLUMN Children INTEGER;
+ALTER TABLE covid_19_merged ADD COLUMN Adults INTEGER;
+ALTER TABLE covid_19_merged ADD COLUMN Elders INTEGER;
+ALTER TABLE covid_19_merged ADD COLUMN Seniors INTEGER;
+
+
+UPDATE covid_19_merged
+SET
+    Children = (Age_0_4 + Age_5_9 + Age_10_14),
+
+    Adults = (Age_15_19 + Age_20_24 + Age_25_29 +
+              Age_30_34 + Age_35_39 + Age_40_44 +
+              Age_45_49 + Age_50_54 + Age_55_59 +
+              Age_60_64),
+
+    Elders = (Age_65_69 + Age_70_74),
+
+    Seniors = (Age_75_79 + Age_80_84 + Age_85_plus);
+	
+	SELECT * FROM covid_19_merged;
+	
+	
+
+
+
+
+
+SELECT 
+    La_name,
+    La_code,
+
+    -- COVID deaths
+    ROUND(total_deaths * 1000.0 / Total, 2) AS total_deaths,
+  
+
+    -- Merged age groups
+    ROUND(Children * 1000.0 / Total, 2) AS Children,
+    ROUND(Adults   * 1000.0 / Total, 2) AS Adults,
+    ROUND(Elders   * 1000.0 / Total, 2) AS Elders,
+    ROUND(Seniors  * 1000.0 / Total, 2) AS Seniors,
+
+    -- Deprivation
+    ROUND(No_deprivation * 1000.0 / Total, 2) AS No_deprivation,
+    ROUND(Deprivation_in_one_dimesion * 1000.0 / Total, 2) AS Deprivation_in_one_dimesion,
+    ROUND(Deprivation_in_two_dimesion * 1000.0 / Total, 2) AS Deprivation_in_two_dimesion,
+    ROUND(Deprivation_in_three_dimesion * 1000.0 / Total, 2) AS Deprivation_in_three_dimesion,
+    ROUND(Deprivation_in_four_dimesion * 1000.0 / Total, 2) AS Deprivation_in_four_dimesion,
+
+    -- Occupations
+    ROUND("Managers,_directors_and_senior_officials" * 1000.0 / Total, 2) AS "Managers,_directors_and_senior_officials",
+    ROUND(Professional_occupations * 1000.0 / Total, 2) AS Professional_occupations,
+    ROUND(Associate_professional_and_technical_occupations * 1000.0 / Total, 2) AS Associate_professional_and_technical_occupations,
+    ROUND(Administrative_and_secretarial_occupations * 1000.0 / Total, 2) AS Administrative_and_secretarial_occupations,
+    ROUND(Skilled_trades_occupations * 1000.0 / Total, 2) AS Skilled_trades_occupations,
+    ROUND("Caring,_leisure_and_other_service_occupations" * 1000.0 / Total, 2) AS "Caring,_leisure_and_other_service_occupations",
+    ROUND(Sales_and_customer_service_occupations * 1000.0 / Total, 2) AS Sales_and_customer_service_occupations,
+    ROUND("Process,_plant_and_machine_operatives" * 1000.0 / Total, 2) AS "Process,_plant_and_machine_operatives",
+    ROUND(Elementary_occupations * 1000.0 / Total, 2) AS Elementary_occupations,
+
+    -- Education
+    ROUND(No_qualifications * 1000.0 / Total, 2) AS No_qualifications,
+    ROUND(Level_1_and_entry_level_qualifications * 1000.0 / Total, 2) AS Level_1_and_entry_level_qualifications,
+    ROUND(Level_2_qualifications * 1000.0 / Total, 2) AS Level_2_qualifications,
+    ROUND(Apprenticeship * 1000.0 / Total, 2) AS Apprenticeship,
+    ROUND(Level_3_qualifications * 1000.0 / Total, 2) AS Level_3_qualifications,
+    ROUND(Level_4_qualifications_or_above * 1000.0 / Total, 2) AS Level_4_qualifications_or_above,
+    ROUND(Other_qualifications * 1000.0 / Total, 2) AS Other_qualifications
+
+FROM covid_19_merged;
+  

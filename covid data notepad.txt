@@ -1,0 +1,256 @@
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_name = "Shepway"
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000190","E07000191")
+
+UPDATE COVID_19_deaths
+SET La_name="Somerset West and Taunton", La_code="E07000246"
+WHERE COVID_19_deaths.La_code in ("E07000190","E07000191")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000246")
+
+
+UPDATE COVID_19_deaths
+SET La_name = "Buckinghamshire", La_code="E06000060"
+WHERE COVID_19_deaths.La_name="South Bucks"
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000246")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000201","E07000204")
+
+UPDATE COVID_19_deaths
+SET La_name="West Suffolk", La_code="E07000245"
+WHERE COVID_19_deaths.La_code in ("E07000201","E07000204")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000245")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000205","E07000206")
+
+UPDATE COVID_19_deaths
+SET La_name = "East Suffolk", La_code="E07000244"
+WHERE COVID_19_deaths.La_code in ("E07000205","E07000206")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000244")
+
+UPDATE COVID_19_deaths
+SET La_code="E07000193"
+WHERE COVID_19_deaths.La_name in ("East Staffordshire")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000193")
+
+UPDATE COVID_19_deaths
+SET La_code="E06000011"
+WHERE COVID_19_deaths.La_name in ("East Riding of Yorkshire")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000011")
+
+
+UPDATE COVID_19_deaths
+SET La_code="E06000061", La_name ="North Northamptonshire"
+WHERE COVID_19_deaths.La_name in ("East Northamptonshire")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000061")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000062" , La_name = "West Northamptonshire"
+WHERE COVID_19_deaths.La_name in ("Northampton")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000062")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000049","E07000050","E07000053","E07000051","E07000052")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000059" , La_name = "Dorset"
+WHERE COVID_19_deaths.La_code in ("E07000049","E07000050","E07000053","E07000051","E07000052")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000059")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000028","E07000048","E06000029")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000058" , La_name = "Bournemouth, Christchurch and Poole"
+WHERE COVID_19_deaths.La_code in ("E06000028","E07000048","E06000029")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000058")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000004","E07000005","E07000006","E07000007")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000060" , La_name = "Buckinghamshire"
+WHERE COVID_19_deaths.La_code in ("E07000004","E07000005","E07000006","E07000007")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000060")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000004","E07000005","E07000006","E07000007")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000060" , La_name = "Buckinghamshire"
+WHERE COVID_19_deaths.La_code in ("E07000004","E07000005","E07000006","E07000007")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000060")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000151","E07000154","E07000155")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000062" , La_name = "West Northamptonshire"
+WHERE COVID_19_deaths.La_code in ("E07000151","E07000154","E07000155")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000062")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000150","E07000152","E07000153","E07000156")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000061" , La_name = "North Northamptonshire"
+WHERE COVID_19_deaths.La_code in ("E07000150","E07000152","E07000153","E07000156")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000061")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000187","E07000188","E07000189","E07000246")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000066" , La_name = "Somerset"
+WHERE COVID_19_deaths.La_code in ("E07000187","E07000188","E07000189","E07000246")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000066")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000163","E07000164","E07000165","E07000166","E07000167","E07000168","E07000169")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000065" , La_name = "North Yorkshire"
+WHERE COVID_19_deaths.La_code in ("E07000163","E07000164","E07000165","E07000166","E07000167","E07000168","E07000169")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000065")
+
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000027","E07000030","E07000031")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000064" , La_name = "Westmorland and Furness"
+WHERE COVID_19_deaths.La_code in ("E07000027","E07000030","E07000031")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000064")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E07000026","E07000028","E07000029")
+
+UPDATE COVID_19_deaths
+SET La_code= "E06000063" , La_name = "Cumbria"
+WHERE COVID_19_deaths.La_code in ("E07000026","E07000028","E07000029")
+
+SELECT COVID_19_deaths.La_code, COVID_19_deaths.La_name
+FROM COVID_19_deaths
+WHERE COVID_19_deaths.La_code in ("E06000063")
+
+
+SELECT La_code, La_name
+FROM covidupdated
+WHERE La_code IN ("E06000010")
+
+UPDATE covidupdated
+SET La_name = "Kingston upon Hull, City of"
+WHERE La_code IN ("E06000010")
+
+SELECT La_code, La_name
+FROM covidupdated
+WHERE La_code IN ("E06000010")
+
+
+SELECT La_code, La_name
+FROM covidupdated
+WHERE La_code IN ("E06000019")
+
+UPDATE covidupdated
+SET La_name = "Herefordshire, County of"
+WHERE La_code IN ("E06000019")
+
+SELECT La_code, La_name
+FROM covidupdated
+WHERE La_code IN ("E06000019")
+
+
+
+SELECT covidupdated.La_code, covidupdated.La_name
+FROM covidupdated
+WHERE covidupdated.La_code in ("E06000023")
+
+UPDATE covidupdated
+SET  La_name = "Bristol, City of"
+WHERE covidupdated.La_code in ("E06000023")
+
+SELECT covidupdated.La_code, covidupdated.La_name
+FROM covidupdated
+WHERE covidupdated.La_code in ("E06000023")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
